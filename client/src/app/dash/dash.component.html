@@ -1,0 +1,24 @@
+<a href="/logout">Log out</a>
+<div id="welcome">
+  <h1>Hi, {{userName}}</h1>
+  <a [routerLink]="['/new']">Add a Question</a>
+</div>
+<div id="container">
+  <!-- search bar -->
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Answers</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let q of allQuestions">
+      <td>{{q.content}}</td>
+      <td>{{q._answer.length}}</td>
+      <td>
+        <a [routerLink]="['/question', q._id]">Show</a>
+        <a [routerLink]="['/answer', q._id]">Answer</a>
+      </td>
+    </tr>
+  </table>
+</div>
+

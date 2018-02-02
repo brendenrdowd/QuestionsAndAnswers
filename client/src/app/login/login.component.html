@@ -1,0 +1,10 @@
+<div id="content">
+  <h2>Login</h2>
+  <hr>
+  <h5 *ngIf="errMsg.length > 0">{{errMsg}}</h5>
+  <form (submit)="login()">
+    <label for="name">Name:</label>
+    <input type="text" name="name" [(ngModel)]="user.name">
+    <input type="submit" value="submit">
+  </form>
+</div>
