@@ -22,7 +22,7 @@ export class AnswerComponent implements OnInit {
   }
   newAnswer(id) {
     this.answer['content'] = this.answer['content'].trim();
-    if (this.answer['content'].length > 7) {
+    if (this.answer['content'].length >= 7) {
       this.errMsg = ""
       this._interlink.newAnswer(this.answer, this.id, (res)=> {
         this._router.navigate(['dash'])

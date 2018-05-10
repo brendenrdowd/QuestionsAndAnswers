@@ -30,7 +30,7 @@ export class InterlinkService {
   }
   grabQuestion(id){ 
     this._http.get('/question/' + id).subscribe((res)=>{
-      console.log("find one back in service",res.json());
+      console.log("find one back in service", res.json());
       this.question.next(res.json())
       return
     })
