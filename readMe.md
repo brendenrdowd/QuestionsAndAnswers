@@ -10,11 +10,11 @@ Since the final, which I passed with an 87%, I have worked on fixing logical err
 I plan on changing the styling and the usability to be more reminiscient of something like Reddit. 
 
 ### Login
-![Login Portal](./client/src/assets/Login.png "Login portal")
+![Login Portal](./client/dist/assets/Login.png "Login portal")
 simple name entry, will be updated to include a password field, as one was not required for the exam. 
 
 ### Dashboard
-![Dashboard](./client/src/assets/Dashboard.png "Dashboard")
+![Dashboard](./client/dist/assets/Dashboard.png "Dashboard")
 After successfully logging in the user will land on the dashboard where they can see the most recently asked questions. They can either answer a question or ask their own. 
 
 ### Answer
