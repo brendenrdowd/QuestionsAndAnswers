@@ -1,4 +1,4 @@
-#content{
+#welcomemodal{
     width:300px;
     position:fixed;
     top:50%;
@@ -12,12 +12,13 @@
 h5{
     color:red;
 }
-input[type=text]{
+.logininput{
     border-radius:2px;
     border:1px solid #c0c0c0;
     box-shadow: inset 1px 1px 1px gray;
     text-align: center;
     padding:3px;
+    height:auto;
 }
 
 

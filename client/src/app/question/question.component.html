@@ -1,21 +1,30 @@
-<div id="header">
-  <div id="left">
-    <a  class="navstuff" [routerLink]="['/dash']">Home</a>
-    <p class="navstuff" > | </p>
-    <a class="navstuff"  [routerLink]="['/answer', question._id]">Answer this question</a>
-  </div>
-  <a href="/logout">Logout</a>
-</div>
+<div class="container">
+  <ul class="navbar">
+    <li class="navlink">
+      <a [routerLink]="['/dash']">Home</a>
+    </li>
+    
+    <li class="navlink" id="logout">
+      <a href="/logout">Logout</a>
+    </li>
+  </ul>
 
-<div id="content">
-  <h1>{{ question['content'] }}</h1>
-  <h4>{{ question['desc'] }}</h4> 
-  <br>
-  <table *ngFor="let a of allAnswers">
-    <tr>
-      <td>{{a._user.name}} - {{a.content}} {{a.details}}</td> <!-- Username,answer, details -->
-      <td>{{a.likes}}</td> <!-- likes -->
-      <td><button (click)="like(a._id)"></button></td>
-    </tr>
-  </table>
+  <div id="content">
+    <h1>{{ question['content'] }}</h1>
+    <h4>{{ question['desc'] }}</h4>
+    <br>
+    <table *ngFor="let a of allAnswers">
+      <tr>
+        <td>{{a._user.name}} - {{a.content}} {{a.details}}</td>
+        <!-- Username,answer, details -->
+        <td>{{a.likes}}</td>
+        <!-- likes -->
+        <td>
+          <button (click)="like(a._id)"></button>
+        </td>
+      </tr>
+    </table>
+    <a class="btn" [routerLink]="['/answer', question._id]">Have an Answer?</a>
+  </div>
 </div>
+<!--container-->

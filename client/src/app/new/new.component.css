@@ -2,3 +2,7 @@ p{
     color:red;
     font-family: sans-serif;
 }
+
+label{
+    margin: 3px;
+}

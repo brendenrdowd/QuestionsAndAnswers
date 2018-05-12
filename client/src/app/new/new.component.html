@@ -1,15 +1,23 @@
-<div id="container">
-  <a [routerLink]="['/dash']">Home</a>
-  <a href="/logout">Logout</a>
+<div class="container">
+  <ul class="navbar">
+    <li class="navlink"><a [routerLink]="['/dash']">Home</a></li>
+    <li class="navlink" id="logout"><a href="/logout">Log Out</a></li>
+  </ul>
   <div id="newQ">
     <form (submit)="newQuestion()">
       <p *ngIf="errMsg.length > 0">{{errMsg}}</p>
-      <label for="content">Question:</label>
-      <input type="text" name="content" [(ngModel)]="question.content">
-      <label for="desc">Description (optional):</label>
-      <input type="text" name="desc" [(ngModel)]="question.desc">
-      <input type="submit" value="submit">
+      <div class="newinput">
+        <label for="content">Question:</label>
+        <br>
+        <input type="text" name="content" [(ngModel)]="question.content">
+      </div>
+      <div class="newinput">
+        <label for="desc">Description (optional):</label>
+        <br>
+        <input type="text" name="desc" [(ngModel)]="question.desc">
+      </div>
+      <input type="submit" class="btn" value="Ask">
     </form>
-    <button><a [routerLink]="['/dash']">Cancel</a></button>
+    <a class="btn" [routerLink]="['/dash']">Cancel</a>
   </div>
 </div>

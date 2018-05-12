@@ -1,9 +1,9 @@
-<div id="content">
+<div id="welcomemodal">
   <h2>Welcome!</h2>
   <hr>
   <h5 *ngIf="errMsg.length > 0">{{errMsg}}</h5>
   <form (submit)="login()">
-    <input type="text" name="name" placeholder="What's Your Name?" [(ngModel)]="user.name">
+    <input class="logininput" type="text" name="name" placeholder="What's Your Name?" [(ngModel)]="user.name">
     <input class="btn" type="submit" value="Login">
   </form>
 </div>
